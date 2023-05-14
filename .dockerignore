@@ -1,0 +1,14 @@
+# Docker Ignore File
+
+/node_modules
+
+# env
+.env
+*.env
+
+# Other files
+npm-debug.log
+build
+.git
+*.md
+.gitignore
