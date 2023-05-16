@@ -1,21 +1,20 @@
-import "./App.css";
 import MainMenu from "../Components/MainMenu";
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import { IconButton } from "@mui/material";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { Link } from 'react-router-dom';
 
-function App() {
+function Education() {
   return (
     <div className="App">
       <div className="App-main">
-        <IconButton id="basic-button" component={Link} to="/">
+        <IconButton id="basic-button" component={Link} to ="/">
           <HelpOutlineIcon />
         </IconButton>
-        <h1>The Question</h1>
+        <h1>Education</h1>
         <MainMenu />
       </div>
     </div>
   );
 }
 
-export default App;
+export default Education;

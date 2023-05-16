@@ -1,13 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App/App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App/App";
+import Technology from "./Pages/Technology";
+import Education from "./Pages/Education";
+import Society from "./Pages/Society";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="technology" element={<Technology />} />
+        <Route path="education" element={<Education />} />
+        <Route path="society" element={<Society />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

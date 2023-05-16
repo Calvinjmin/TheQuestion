@@ -1,8 +1,10 @@
-import * as React from 'react';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import MenuTwoToneIcon from '@mui/icons-material/MenuTwoTone';
-import { IconButton } from '@mui/material';
+import * as React from "react";
+import { Link } from "react-router-dom";
+
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import MenuTwoToneIcon from "@mui/icons-material/MenuTwoTone";
+import { IconButton } from "@mui/material";
 
 export default function MainMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -18,9 +20,9 @@ export default function MainMenu() {
     <div>
       <IconButton
         id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
+        aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
+        aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
         <MenuTwoToneIcon></MenuTwoToneIcon>
@@ -30,14 +32,27 @@ export default function MainMenu() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
         MenuListProps={{
-          'aria-labelledby': 'basic-button',
+          "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>Technology</MenuItem>
-        <MenuItem onClick={handleClose}>Education</MenuItem>
-        <MenuItem onClick={handleClose}>Society</MenuItem>
-        <MenuItem onClick={handleClose}>Other</MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/technology">Technology</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/education">Education</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/society">Society</Link>
+        </MenuItem>
       </Menu>
     </div>
   );
