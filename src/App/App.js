@@ -16,6 +16,8 @@ const HomeStyle = {
     textAlign: "center",
     alignItems: "center",
     background: "#BA9C9C",
+    paddingLeft: "25vh",
+    paddingRight: "25vh",
   },
 };
 
